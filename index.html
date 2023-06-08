@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
+    <div class="form-container">
+        <p class="heading">Sign Up</p>
+        <form>
+            <div class="form-input">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username-input" required>
+                <div id="username-error"></div>
+            </div>
 
-    <h1>Sign Up</h1>
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username-input" required>
-        <div id="username-error"></div>
+            <div class="form-input">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email-input" required>
+                <div id="email-error"></div>
+            </div>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email-input" required>
-        <div id="email-error"></div>
+            <div class="form-input">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password-input" required>
+                <div id="password-error"></div>
+            </div>
 
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password-input" required>
-        <div id="password-error"></div>
+            <div class="form-input">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" name="confirm-password" id="c-password-input" required>
+                <div id="confirm-password-error" required></div>
+            </div>
 
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" name="confirm-password" id="c-password-input" required>
-        <div id="confirm-password-error" required></div>
+            <div class="form-input">
+                <button type="submit" id="submit-btn" class="disabled" disabled="true">Please enter valid data to submit</button>
+            </div>
 
-        <button type="submit">Submit</button>
+        </form>
 
-    </form>
-
-    <button id="password-show-hide">Show Password</button>
+        <!-- <button id="password-show-hide">Show Password</button> -->
+    </div>
 
     <script src="index.js"></script>
 </body>
+
 </html>
