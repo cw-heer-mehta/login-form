@@ -6,6 +6,8 @@ let buttonEnabled = false;
 
 const usernameInput = document.getElementById("username-input");
 
+
+//FORM
 $("#username-input").on("change", () => {
     var i = $("#username-input").val();
     validateUsername(i);
@@ -26,13 +28,6 @@ $("#password-input").on("change", () => {
 $("#c-password-input").on("change", () => {
     validateConfirmPassword(true);
 })
-
-
-
-
-
-
-
 
 
 $("#password-show-hide").click(() => {
@@ -162,7 +157,7 @@ function enableButton() {
             .text("Submit")
             .removeClass("disabled")
             .addClass("active-button")
-            .attr("disabled", "false")
+            .attr("disabled", false);
 
         buttonEnabled = true;
     }
@@ -180,5 +175,52 @@ function disableButton() {
         .attr("disabled", "true");
 
     buttonEnabled = false;
+
+}
+
+
+//SUBMIT
+$("form").submit((e) => {
+    e.preventDefault();
+    console.log("submit")
+    const username = $("#username-input").val();
+    const useremail = $("#username-input").val();
+
+    $("#modal")
+        .removeClass("hide-modal")
+        .addClass("modal");
+
+    $("#main-container").addClass("disable-doc")
+
+    const htmlData = `Username: ${username} <br> Email: ${useremail}`;
+
+    $("#modal-data").html(htmlData);
+    console.log(htmlData);
+
+})
+
+
+//MODAL
+
+$("#modal-close").click(() => {
+    console.log("close")
+    closeModal();
+})
+
+
+function closeModal() {
+    $("#modal").removeClass("modal").addClass("hide-modal");
+    $("#main-container").removeClass("disable-doc");
+
+    $("form")[0].reset();
+
+    validUsername = false;
+    validEmail = false;
+    validPassword = false;
+    validCPassword = false;
+    buttonEnabled = false;
+
+    disableButton();
+
 
 }
