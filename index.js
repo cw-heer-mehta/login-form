@@ -8,24 +8,24 @@ const usernameInput = document.getElementById("username-input");
 
 
 //FORM
-$("#username-input").on("change", () => {
+$("#username-input").on("input", () => {
     var i = $("#username-input").val();
     validateUsername(i);
 })
 
 
-$("#email-input").on("change", () => {
+$("#email-input").on("input", () => {
     var i = $("#email-input").val();
     validateEmail(i);
 })
 
 
-$("#password-input").on("change", () => {
+$("#password-input").on("input", () => {
     var i = $("#password-input").val();
     validatePassword(i);
 })
 
-$("#c-password-input").on("change", () => {
+$("#c-password-input").on("input", () => {
     validateConfirmPassword(true);
 })
 
