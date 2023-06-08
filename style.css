@@ -142,3 +142,32 @@ form {
 .disable-doc{
     background-color: #757373;
 }
+
+@media (max-width: 987px){
+    .form-container{
+        width: 40%;
+    }
+    .form-input label {
+        font-size: 1rem;
+    }
+    .form-input div{
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 517px){
+    .form-container{
+        width: 100%;
+        align-self: center;
+        margin: auto;
+    }
+    .main-container{
+        justify-content: center;
+    }
+    .form-input label {
+        font-size: 1rem;
+    }
+    .form-input div{
+        font-size: 0.75rem;
+    }
+}
