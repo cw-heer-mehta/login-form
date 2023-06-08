@@ -41,8 +41,19 @@ $("#password-show-hide").click(() => {
     const index = (currentValue != "password");
     $("#password-input").attr("type", typeValues[Number(index)]);
 
-    const buttonText = ["Show Password", "Hide Password"];
-    $("#password-show-hide").text(buttonText[Number(currentValue == "password")]);
+    const buttonClass = ["fa-regular fa-eye", "fa-regular fa-eye-slash"];
+    $("#password-show-hide").attr("class", buttonClass[Number(currentValue == "password")]);
+})
+
+
+$("#c-password-show-hide").click(() => {
+    const typeValues = ["text", "password"]
+    const currentValue = $("#c-password-input").attr("type");
+    const index = (currentValue != "password");
+    $("#c-password-input").attr("type", typeValues[Number(index)]);
+
+    const buttonClass = ["fa-regular fa-eye", "fa-regular fa-eye-slash"];
+    $("#c-password-show-hide").attr("class", buttonClass[Number(currentValue == "password")]);
 })
 
 

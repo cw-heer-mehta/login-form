@@ -86,3 +86,11 @@ form {
 .right{
     border: solid  green;
 }
+
+.form-input i{
+    position: relative;
+    bottom: 1.5rem;
+    font-size: 1rem;
+    color: #757373;
+    left: 89%;  
+}

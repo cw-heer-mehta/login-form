@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/6471ebb54d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -29,12 +30,14 @@
             <div class="form-input">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password-input" required>
+                <i class="fa-regular fa-eye" id="password-show-hide"></i>
                 <div id="password-error"></div>
             </div>
 
             <div class="form-input">
                 <label for="confirm-password">Confirm Password:</label>
                 <input type="password" name="confirm-password" id="c-password-input" required>
+                <i class="fa-regular fa-eye" id="c-password-show-hide"></i>
                 <div id="confirm-password-error" required></div>
             </div>
 
@@ -43,8 +46,6 @@
             </div>
 
         </form>
-
-        <!-- <button id="password-show-hide">Show Password</button> -->
     </div>
 
     <script src="index.js"></script>
