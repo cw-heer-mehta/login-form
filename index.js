@@ -192,7 +192,7 @@ $("form").submit((e) => {
 
     $("#main-container").addClass("disable-doc")
 
-    const htmlData = `Username: ${username} <br> Email: ${useremail}`;
+    const htmlData = `Username: <b>${username}</b> <br> Email: <b>${useremail}`;
 
     $("#modal-data").html(htmlData);
     console.log(htmlData);

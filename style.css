@@ -123,6 +123,10 @@ form {
     z-index: 100000;
 }
 
+.modal .modal-data{
+    font-size: 1rem;
+}
+
 .modal-close{
     position: absolute;
     top: 0.5rem;
@@ -153,6 +157,15 @@ form {
     .form-input div{
         font-size: 0.75rem;
     }
+    .modal{
+        width: 100%;
+        align-self: center;
+        left: 0%;
+    }
+    .modal .modal-data{
+        font-size: 1rem;
+        
+    }
 }
 
 @media (max-width: 517px){
@@ -169,5 +182,12 @@ form {
     }
     .form-input div{
         font-size: 0.75rem;
+    }
+    .modal{
+        width: 100%;
+        left: 0%;
+    }
+    .modal .modal-data{
+        font-size: 1rem;
     }
 }
